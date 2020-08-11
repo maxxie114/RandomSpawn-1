@@ -15,6 +15,7 @@ public class Main extends PluginBase {
         if(!new File(this.getDataFolder(), "config.yml").exists()) this.saveResource("config.yml");
 
     this.getServer().getPluginManager().registerEvents(new SenMain(this), this);
+    this.getServer().getPluginManager().registerEvents(new SenChat(this), this);
     }
 
     @Override
