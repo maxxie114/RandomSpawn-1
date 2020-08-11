@@ -1,0 +1,4 @@
+maxRadius: "1000"
+minRadius: "500"
+maxY: "255"
+minY: "1"

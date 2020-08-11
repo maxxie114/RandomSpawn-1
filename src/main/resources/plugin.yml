@@ -1,0 +1,8 @@
+name: Random Spawn
+main: vp.sen.rs.Main
+version: "1.0.0"
+api: ["1.0.5"]
+load: POSTWORLD
+author: NameDoesCode
+description: Random spawning for nukkit.
+prefix: "§b[§dRS§b]§r"
