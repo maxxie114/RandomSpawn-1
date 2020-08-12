@@ -2,7 +2,6 @@ package vp.sen.rs;
 
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
-import vp.sen.rs.listeners.SenChat;
 import vp.sen.rs.listeners.SenMain;
 import vp.sen.rs.utility.SenConfig;
 
@@ -16,8 +15,7 @@ public class Main extends PluginBase {
         this.getLogger().info(TextFormat.AQUA + "Random Spawn by " + TextFormat.LIGHT_PURPLE + "NameDoesCode.");
         if(!new File(this.getDataFolder(), "config.yml").exists()) this.saveResource("config.yml");
 
-    this.getServer().getPluginManager().registerEvents(new SenMain(this), this);
-    this.getServer().getPluginManager().registerEvents(new SenChat(this), this);
+    this.getServer().getPluginManager().registerEvents(new SenMain(this,conf), this);
     }
 
     @Override
