@@ -1,8 +1,9 @@
 package vp.sen.rs.utility;
 
 import cn.nukkit.utils.Config;
-import java.io.File;
 import vp.sen.rs.Main;
+
+import java.io.File;
 
 public class SenConfig {
 	public final Main plugin;

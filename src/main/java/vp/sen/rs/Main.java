@@ -2,8 +2,10 @@ package vp.sen.rs;
 
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
+import vp.sen.rs.listeners.SenChat;
+import vp.sen.rs.listeners.SenMain;
 import vp.sen.rs.utility.SenConfig;
-import vp.sen.rs.listeners.*;
+
 import java.io.File;
 
 public class Main extends PluginBase {
