@@ -13,17 +13,21 @@ import vp.sen.rs.utility.SenConfig;
 public class SenMain implements Listener {
 	public final Main plugin;
 	public final SenConfig conf;
+    public final int minRadius;
+    public final int maxRadius;
 	
-	public SenMain(Main plugin) {
+	public SenMain(Main plugin, SenConfig conf) {
 		this.plugin = plugin;
-		this.conf = new SenConfig(plugin);
+		this.conf = conf;
+        this.minRadius = conf.getInt("minRadius");
+        this.maxRadius = conf.getInt("maxRadius");
 	}
 
 	public void roll(Position pos, Player player, PlayerRespawnEvent e) {
 		boolean found = false;
 		int y = 255;
-		int x = Long.valueOf(Math.round(Math.random() * conf.getInt("maxRadius"))).intValue()+conf.getInt("minRadius");
-		int z = Long.valueOf(Math.round(Math.random() * conf.getInt("maxRadius"))).intValue()+conf.getInt("minRadius");
+		int x = Long.valueOf(Math.round(Math.random() *maxRadius)).intValue()+minRadius;
+		int z = Long.valueOf(Math.round(Math.random() *maxRadius)).intValue()+minRadius;
 
 		if(Math.round(Math.random()*2) == 1) x = x-(x*2);
 		if(Math.round(Math.random()*2) == 1) z = z-(z*2);
