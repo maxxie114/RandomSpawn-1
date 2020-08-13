@@ -4,4 +4,4 @@
 - [x] Fully random spawning
 - [x] Minimum radius
 - [x] Safe respawn (**WIP**)
-- [ ] ~rs command for OP's
+- [ ] Preset spawns

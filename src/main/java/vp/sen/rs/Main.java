@@ -14,7 +14,7 @@ public class Main extends PluginBase {
     public void onEnable() {
         this.getLogger().info(TextFormat.AQUA + "Random Spawn by " + TextFormat.LIGHT_PURPLE + "NameDoesCode.");
         if(!new File(this.getDataFolder(), "config.yml").exists()) this.saveResource("config.yml");
-
+    this.conf = new SenConfig(this);
     this.getServer().getPluginManager().registerEvents(new SenMain(this,conf), this);
     }
 
