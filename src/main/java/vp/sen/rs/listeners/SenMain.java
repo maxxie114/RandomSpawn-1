@@ -132,10 +132,7 @@ public class SenMain implements Listener {
 	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = false)
 	public void onRespawn(PlayerRespawnEvent e) {
 		Position pos = e.getRespawnPosition();
-		Position spos = pos.getLevel().getSpawnLocation();
-    if(pos.getLevel().getBlock(Long.valueOf(Math.round(pos.getX())).intValue(), Long.valueOf(Math.round(pos.getY())).intValue(), Long.valueOf(Math.round(pos.getZ())).intValue()).getId() != BlockID.BED_BLOCK && e.getPlayer().getSpawn() == pos) {
-pos.setLevel(plugin.getServer().getDefaultLevel());
- roll(pos,e.getPlayer(),e);
-       }
+		Position spos = plugin.getServer().getDefaultLevel().getSpawnLocation();
+    if(spos.getLevel().getBlock(Long.valueOf(Math.round(pos.getX())).intValue(), Long.valueOf(Math.round(pos.getY())).intValue(), Long.valueOf(Math.round(pos.getZ())).intValue()).getId() != BlockID.BED_BLOCK && e.getPlayer().getSpawn() == pos) roll(spos,e.getPlayer(),e);
 	}
 }
