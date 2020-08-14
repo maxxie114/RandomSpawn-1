@@ -106,10 +106,10 @@ public class SenMain implements Listener {
 		int y = 255;
 		int x = Long.valueOf(Math.round(Math.random() *maxRadius)).intValue()+minRadius;
 		int z = Long.valueOf(Math.round(Math.random() *maxRadius)).intValue()+minRadius;
-
+        
 		if(Math.round(Math.random()*2) == 1) x = x-(x*2);
 		if(Math.round(Math.random()*2) == 1) z = z-(z*2);
-		while(!found && y > 0) {
+		if(pos.getLevel().isChunkLoaded(x,z)) while(!found && y > 0) {
 			if(pos.getLevel().getBlock(x,y,z).isSolid() && this.safe(pos.getLevel().getBlock(x,y+1,z).getId(),9) && this.safe(pos.getLevel().getBlock(x,y+2,z).getId(),0)) {
 			  e.setRespawnPosition(new Position((double) x + 0.5, (double) y + 1, (double) z + 0.5));
 				found = true;
@@ -119,6 +119,7 @@ public class SenMain implements Listener {
 				this.roll(pos,player,e);
 			}
 		}
+ else this.roll(pos,player,e);
   }
   
  
