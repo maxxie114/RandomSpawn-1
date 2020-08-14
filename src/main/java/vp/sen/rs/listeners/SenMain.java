@@ -114,7 +114,7 @@ public class SenMain implements Listener {
 			  e.setRespawnPosition(new Position((double) x + 0.5, (double) y + 1, (double) z + 0.5));
 				found = true;
 			}
-			y--;
+			y = y-1;
 			if(y == 0 && !found) {
 				this.roll(pos,player,e);
 			}
