@@ -1,8 +1,8 @@
-name: Random Spawn
+name: RandomSpawn
 main: vp.sen.rs.Main
-version: "1.0.0"
+version: "0.1"
 api: ["1.0.5"]
 load: POSTWORLD
 author: NameDoesCode
-description: Random spawning for nukkit.
-prefix: "§b[§dRS§b]§r"
+description: WIP Random Spawn
+prefix: "§dR§bS§r"

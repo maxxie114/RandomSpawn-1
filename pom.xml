@@ -5,8 +5,8 @@
     <groupId>vp.sen</groupId>
     <artifactId>rs</artifactId>
     <version>1.0.0</version>
-    <name>Main</name>
-    <description>Random spawn plugin for nukkit.</description>
+    <name>Random spawn</name>
+    <description>A nukkit plugin for random spawning.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,5 +32,7 @@
     
     <build>
         <defaultGoal>clean package</defaultGoal>
+    	<plugins>
+    	</plugins>
     </build>
 </project>
