@@ -1,8 +1,23 @@
 name: RandomSpawn
 main: vp.sen.rs.Main
 version: "0.1"
-api: ["1.0.5"]
+api: ["1.0.11"]
 load: POSTWORLD
 author: NameDoesCode
 description: WIP Random Spawn
 prefix: "§dR§bS§r"
+commands:
+  wild:
+    aliases: ["rt","randomtp","rtp"]
+    description: Randomly teleports a player.
+    usage: "/wild <player>"
+    permission: rs.command.wild
+    permission-message: "You do not have permissions to randomly teleport."
+permissions:
+  rs.command.wild:
+    description: "Allows players to use /wild."
+    default: false
+    children:
+      rs.command.wild.bypass:
+        description: "Allows people to use /wild on other players & bypass cooldown."
+        default: false

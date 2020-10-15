@@ -1,2 +1,4 @@
 max: 1024
 min: 128
+onRespawn: true
+onJoin: true
